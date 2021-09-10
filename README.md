@@ -11,7 +11,7 @@
 
 # BUGS
 
-Please report bugs to nowage[at]gmail.com.
+Please report bugs to nackchun@gmail.com
 
 # todo
 - Support The Version
