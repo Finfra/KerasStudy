@@ -1,5 +1,4 @@
 # Tensorflow Study Example
-- 더이상 업데이트 하지 않습니다.
 - 예전 버전 혹은 Tensorflow버전은 https://github.com/Finfra/TensorflowStudyExample 을 참고 하세요.
 
 
