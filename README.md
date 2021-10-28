@@ -5,27 +5,29 @@
 ## Keras Study
 ```
 본 문서는 Keras를 사용하여 Deep Learning을 구현하기 위한 기초적인 실습 자료.
+```
 
 The code and comments are written by NamJungGu <nowage@gmail.com> <br>
 Maintained by  SungKukKim <nackchun@gmail.com> <br>
-```
+
+
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 
 
 
 ## Example Agenda
-### [00.Background](./00.Background)
-### [01.CoLab](./01.CoLab)
-### [02.AnalyticProcess](./02.AnalyticProcess)
-### [03.KerasIntro](./03.KerasIntro)
-### [04.MLP](./04.MLP)
-### [05.CNN](./05.CNN)
-### [06.RNN](./06.RNN)
-### [07.AutoEncoder](./07.AutoEncoder)
-### [08.ReinforcemetLearning](./08.ReinforcemetLearning)
-### [09.EtcExample](./09.EtcExample)
-### [10.Project](./10.Project)
+### [00.Background](https://github.com/Finfra/KerasStudy/tree/main/00.Background)
+### [01.CoLab](https://github.com/Finfra/KerasStudy/tree/main/01.CoLab)
+### [02.AnalyticProcess](https://github.com/Finfra/KerasStudy/tree/main/02.AnalyticProcess)
+### [03.KerasIntro](https://github.com/Finfra/KerasStudy/tree/main/03.KerasIntro)
+### [04.MLP](https://github.com/Finfra/KerasStudy/tree/main/04.MLP)
+### [05.CNN](https://github.com/Finfra/KerasStudy/tree/main/05.CNN)
+### [06.RNN](https://github.com/Finfra/KerasStudy/tree/main/06.RNN)
+### [07.AutoEncoder](https://github.com/Finfra/KerasStudy/tree/main/07.AutoEncoder)
+### [08.ReinforcemetLearning](https://github.com/Finfra/KerasStudy/tree/main/08.ReinforcemetLearning)
+### [09.EtcExample](https://github.com/Finfra/KerasStudy/tree/main/09.EtcExample)
+### [10.Project](https://github.com/Finfra/KerasStudy/tree/main/10.Project)
 
 ---
 
@@ -77,31 +79,31 @@ NamJungGu, <nowage[at]gmail.com>
 ### Model
 #### Sequential
 * keras.engine.sequential.Sequential
-```pythonpython
+```python
 from tensorflow.python.keras.models import Sequential
 model = Sequential()
 ```
 
 #### summary
-```pythonpython
+```python
 model.summary()
 ```
 * image version
-```pythonpython
+```python
 ## model.summary()
 from keras.utils.vis_utils import plot_model
 plot_model(model, to_file='vgg.png')
 ```
 
 #### compile
-```pythonpython
+```python
 model.compile(loss='categorical_crossentropy',
 optimizer=RMSprop(),
 metrics=['accuracy'])
 ```
 
 #### fit
-```pythonpython
+```python
 history = model.fit(x_train, y_train,
                     batch_size=batch_size,
                     epochs=epochs,
@@ -109,7 +111,7 @@ history = model.fit(x_train, y_train,
                     validation_data=(x_test, y_test))
 ```
 #### predict_classes
-```pythonpython
+```python
 from matplotlib import pyplot as plt
 i=plt.imread("/content/DeepLearningStudy/data/MNIST_Simple/test/0/0_1907.png")
 img=i[:,:,1:2].reshape(1,28,28,1)
@@ -118,12 +120,12 @@ print(model.predict_classes(img) )
 
 #### save
 * Model 저장.
-```pythonpython
+```python
 model.save("/content/gdrive/mnist.h5")
 ```
 
 * 모델은 Json파일로 저장되고 Weigth파일은 hdf5 형태로 저장시
-```pythonpython
+```python
 model_json = model.to_json()
 with open("/content/mnist_mlp_model.json", "w") as json_file:
     json_file.write(model_json)
@@ -157,10 +159,8 @@ model.save_weights("/content/gdrive/mnist_model.h5")
 ```python
 import h5py
 import numpy as np
-
 filename = "/content/gdrive/mnist_model.h5"
 h5 = h5py.File(filename,'r')
-
 print(h5.keys())
 b=h5['c1']['c1']['bias:0']
 k=h5['c1']['c1']['kernel:0']
@@ -168,7 +168,6 @@ bb=np.array(b)
 print(bb)
 kk=np.array(k)
 kk[:,:,:,0].reshape((3,3))
-
 h5.close()
 ```
 
@@ -479,30 +478,23 @@ hist_view(hist)
 ```python
 input_string="goodMorning".lower()
 char_set=sorted(set(input_string))
-
 char_set=[c for c in char_set if c not in (',',' ','!','\n')]
 ## char_set=[c for c in char_set if c != ' ' and c != ',' and c != '!']
-
 encoder={k:v for v,k in enumerate(char_set)}
 decoder={v:k for v,k in enumerate(char_set)}
-
 print('# Encoder')
 print(encoder)
 encoded_string= [encoder[c] for c in input_string ]
-
 print('# Encoded string')
 print(encoded_string)
-
 string_width=len(input_string)
 input_w=4
 output_w=string_width-input_w
-
 x=[]
 y=[]
 for i in range(output_w):
- x.append( encoded_string[i:i+input_w]  )
- y.append( encoded_string[input_w+i]    )
-
+  x.append( encoded_string[i:i+input_w]  )
+  y.append( encoded_string[input_w+i]    )
 x=array(x)
 y=array(y)
 x = x.reshape((x.shape[0], x.shape[1], 1))
@@ -518,17 +510,12 @@ one_hot_encoder=eye(dict_size)
 decoder={v:k for v,k in enumerate(char_set)}
 encoded_string= [encoder[c] for c in input_string ]
 one_hot_encoded_string=[one_hot_encoder[i] for i in encoded_string]
-
 string_width=len(input_string)
-
 output_w=string_width-input_w
 x=[];y=[]
-
 for i in range(output_w):
   x.append( one_hot_encoded_string[i:i+input_w]  )
   y.append( one_hot_encoded_string[input_w+i]    )
-
-
 x=array(x)
 y=array(y)
 x.shape
@@ -570,7 +557,6 @@ def test_it(test_string,y,debug=True):
   if debug:
     print(f"# {test_string} →  {out}   {isOk}")
   return isOk
-
 print(f'# InputString : {input_string}')
 okCount=0
 for s in range(output_w):
