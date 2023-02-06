@@ -35,9 +35,9 @@ Maintained by  SungKukKim <nackchun@gmail.com> <br>
 ## info
 
 ### Version Info
-* Python3.6
-* Tensorflow1.15
-* Jupyter5.x or new
+* Python :3.8.10
+* Tensorflow : 2.9.2
+* Colab : 2023/1/12
 
 ### BUGS
 
