@@ -1,6 +1,6 @@
 # Tensorflow Study Example
 - 예전 버전 혹은 Tensorflow버전은 https://github.com/Finfra/TensorflowStudyExample 을 참고 하세요.
-- 시작은 https://github.com/Finfra/KerasStudy/blob/main/ExampleMain.ipynb.ipynb 에서 하세요.
+
 
 ## Keras Study
 ```
