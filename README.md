@@ -15,7 +15,6 @@ Maintained by  SungKukKim <nackchun@gmail.com> <br>
 
 
 
-
 ## Example Agenda
 ### [00.Background](https://github.com/Finfra/KerasStudy/tree/main/00.Background)
 ### [01.CoLab](https://github.com/Finfra/KerasStudy/tree/main/01.CoLab)
@@ -27,7 +26,11 @@ Maintained by  SungKukKim <nackchun@gmail.com> <br>
 ### [07.AutoEncoder](https://github.com/Finfra/KerasStudy/tree/main/07.AutoEncoder)
 ### [08.ReinforcemetLearning](https://github.com/Finfra/KerasStudy/tree/main/08.ReinforcemetLearning)
 ### [09.EtcExample](https://github.com/Finfra/KerasStudy/tree/main/09.EtcExample)
-### [10.Project](https://github.com/Finfra/KerasStudy/tree/main/10.Project)
+### [10.Yolo](https://github.com/Finfra/KerasStudy/tree/main/10.Yolo)
+### [11.GeneticAlgorithm](https://github.com/Finfra/KerasStudy/tree/main/11.GeneticAlgorithm)
+### [12.GAN](https://github.com/Finfra/KerasStudy/tree/main/12.GAN)
+### [13.Bert](https://github.com/Finfra/KerasStudy/tree/main/13.Bert)
+### [20.Project](https://github.com/Finfra/KerasStudy/tree/main/20.Project)
 
 ---
 
