@@ -39,9 +39,11 @@ Maintained by  SungKukKim <nackchun@gmail.com> <br>
 ## info
 
 ### Version Info
-* Python :3.8.10
-* Tensorflow : 2.9.2
-* Colab : 2023/1/12
+* Python : 3.10
+* Tensorflow 2.12.0
+* Colab : 2023.07
+* Cuda : cu118 
+* cf) PreInstalled Enviroment : https://github.com/Finfra/gdm
 
 ### BUGS
 
