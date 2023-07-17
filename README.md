@@ -5,7 +5,7 @@
 
 ## Keras Study
 ```
-본 문서는 Keras를 사용하여 Deep Learning을 구현하기 위한 기초적인 실습 자료.
+본 코드는 Keras를 사용하여 Deep Learning을 실습하기 위한 기본 코드입니다.
 ```
 
 The code and comments are written by NamJungGu <nowage@gmail.com> <br>
