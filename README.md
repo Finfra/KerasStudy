@@ -1,5 +1,6 @@
 # Tensorflow Study Example
-- 예전 버전 혹은 Tensorflow버전은 https://github.com/Finfra/TensorflowStudyExample 을 참고 하세요.
+- 2023년 06월 이전 수강자 분들은 [before202306 Branch](https://github.com/Finfra/KerasStudy/tree/before202306)를 참고하세요.
+- 2021년 이전 수강자 분들이나 Tensorflow버전 코드는 <https://github.com/Finfra/TensorflowStudyExample> 을 참고 하세요.
 
 
 ## Keras Study
